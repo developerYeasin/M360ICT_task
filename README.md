@@ -7,7 +7,7 @@ Follow these steps to get the project running on your local machine.
 Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone git@github.com:developerYeasin/M360ICT_task.git
 cd employee-onboarding-form
 ```
 Install Dependencies
