@@ -9,7 +9,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { RadioGroup, RadioGroupItem } from '../../components/ui/radio-group';
 import { mockManagers } from '../../lib/mockData';
 import { useMemo } from 'react';
-import { FormValues } from '@/lib/types';
 import { DatePicker } from './DatePicker';
 
 type Step2Props = {

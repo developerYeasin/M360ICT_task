@@ -9,7 +9,6 @@ import { Input } from '../../components/ui/input';
 import { Slider } from '../../components/ui/slider';
 import { skillsByDepartment } from '../../lib/mockData';
 import { useMemo } from 'react';
-import { FormValues } from '@/lib/types';
 import { Textarea } from '@/components/ui/textarea';
 
 type Step3Props = {

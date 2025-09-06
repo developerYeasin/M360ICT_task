@@ -1,16 +1,17 @@
 'use client';
 
-import { useFormContext } from 'react-hook-form';
+import { UseFormReturn } from 'react-hook-form';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormDescription } from '../../components/ui/form';
+import { FormControl, FormField, FormItem, FormLabel, FormDescription } from '../../components/ui/form';
 import { Checkbox } from '../../components/ui/checkbox';
+import { FormValues } from '@/lib/types';
 
 type Step5Props = {
-  form: any;
+  form: UseFormReturn<FormValues>;
 }
 
 // A simple component to display data neatly
-const ReviewItem = ({ label, value }: { label: string; value: any }) => (
+const ReviewItem = ({ label, value }: { label: string; value: string | number | boolean | undefined | null }) => (
   <div className="flex flex-col">
     <dt className="text-sm font-medium text-gray-500">{label}</dt>
     <dd className="mt-1 text-sm text-gray-900">{String(value) || 'N/A'}</dd>
@@ -49,7 +50,7 @@ export function Step5({ form }: Step5Props) {
         <CardContent className="grid grid-cols-2 gap-4">
           <ReviewItem label="Primary Skills" value={allData.primarySkills?.join(', ')} />
           {allData.primarySkills?.map((skill: string) => (
-            <ReviewItem key={skill} label={`${skill} Experience`} value={`${allData.experience?.[skill] || 0} years`} />
+            <ReviewItem key={skill} label={`${skill} Experience`} value={`${allData.experience?.get(skill) || 0} years`} />
           ))}
           <ReviewItem label="Preferred Hours" value={`${allData.preferredHoursStart} - ${allData.preferredHoursEnd}`} />
           <ReviewItem label="Remote Work Preference" value={`${allData.remoteWorkPreference}%`} />

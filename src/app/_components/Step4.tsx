@@ -7,7 +7,6 @@ import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../../
 import { Input } from '../../components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../components/ui/select';
 import { useMemo } from 'react';
-import { FormValues } from '@/lib/types';
 
 // You can move this helper function to a utils file
 const calculateAge = (dob: Date | undefined) => {

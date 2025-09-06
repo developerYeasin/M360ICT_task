@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useForm, FormProvider } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
@@ -12,12 +12,7 @@ import { Step3 } from './Step3';
 import { Step4 } from './Step4';
 import { Step5 } from './Step5'; // Import Step5
 import { masterFormSchema } from '@/lib/schema'; // Example schema
-import { UseFormReturn } from 'react-hook-form';
-import { FormValues } from '@/lib/types';
 import { Form } from '../../components/ui/form'; // Import the main Form component
-
-// Combine schemas later, for now just use one
-const formSchema = masterFormSchema;
 
 export function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(0);

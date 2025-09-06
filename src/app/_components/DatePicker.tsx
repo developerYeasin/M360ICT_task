@@ -16,7 +16,13 @@ import {
 import { ControllerRenderProps } from "react-hook-form";
 import { FormValues } from "@/lib/types";
 
-export function DatePicker({ field }: { field: ControllerRenderProps<FormValues, any> }) {
+import { FieldPathByValue } from "react-hook-form";
+
+type DatePickerProps<T extends FieldPathByValue<FormValues, Date | undefined>> = {
+  field: ControllerRenderProps<FormValues, T>;
+};
+
+export function DatePicker<T extends FieldPathByValue<FormValues, Date | undefined>>({ field }: DatePickerProps<T>) {
   return (
     <Popover>
       <PopoverTrigger asChild>
