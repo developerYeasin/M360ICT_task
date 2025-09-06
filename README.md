@@ -6,22 +6,22 @@ Follow these steps to get the project running on your local machine.
 
 Clone the Repository
 
-Bash
-
+```bash
 git clone <your-repository-url>
 cd employee-onboarding-form
+```
 Install Dependencies
 This project uses npm as the package manager.
 
-Bash
-
+```bash
 npm install
+```
 Run the Development Server
 This will start the application on http://localhost:3000.
 
-Bash
-
+```bash
 npm run dev
+```
 The application should now be running in your browser.
 
 🧠 Handling Complex Logic
